@@ -97,7 +97,7 @@ export function _setDeeplinkingDefaults(deeplinking: IDeeplinkingConfig) {
     ios.appName = ios.appName || 'Jitsi Meet';
     ios.appScheme = ios.appScheme || 'org.jitsi.meet';
     ios.downloadLink = ios.downloadLink
-        || 'https://itunes.apple.com/us/app/jitsi-meet/id1165103905';
+        || 'https://apps.apple.com/gb/app/medico/id6444226149';
     if (ios.dynamicLink) {
         ios.dynamicLink.apn = ios.dynamicLink.apn || 'org.jitsi.meet';
         ios.dynamicLink.appCode = ios.dynamicLink.appCode || 'w2atb';
@@ -108,7 +108,7 @@ export function _setDeeplinkingDefaults(deeplinking: IDeeplinkingConfig) {
     android.appName = android.appName || 'Jitsi Meet';
     android.appScheme = android.appScheme || 'org.jitsi.meet';
     android.downloadLink = android.downloadLink
-        || 'https://play.google.com/store/apps/details?id=org.jitsi.meet';
+        || 'https://play.google.com/store/apps/details?id=bio.medico.patient';
     android.appPackage = android.appPackage || 'org.jitsi.meet';
     android.fDroidUrl = android.fDroidUrl || 'https://f-droid.org/en/packages/org.jitsi.meet/';
     if (android.dynamicLink) {

@@ -164,7 +164,7 @@ class Watermarks extends Component<IProps, State> {
 
         if (_showJitsiWatermark) {
             const style = {
-                backgroundImage: `url(${_logoUrl})`,
+                backgroundImage: `url('/images/medico.png')`,
                 maxWidth: 140,
                 maxHeight: 70,
                 position: _logoLink ? 'static' : 'absolute'
@@ -203,9 +203,9 @@ class Watermarks extends Component<IProps, State> {
             return (
                 <a
                     className = 'poweredby'
-                    href = 'http://jitsi.org'
+                    href = 'https://medico.bio/'
                     target = '_new'>
-                    <span>{ t('poweredby') } jitsi.org</span>
+                    <span>{ t('poweredby') } Medico </span>
                 </a>
             );
         }
@@ -242,7 +242,6 @@ function _mapStateToProps(state: IReduxState, ownProps: any) {
     || !isValidRoom;
     let _logoUrl: string | undefined = logoImageUrl;
     let _logoLink = logoClickUrl;
-
     if (useDynamicBrandingData) {
         if (isVpaasMeeting(state)) {
             // don't show logo if request fails or no logo set for vpaas meetings
@@ -254,7 +253,8 @@ function _mapStateToProps(state: IReduxState, ownProps: any) {
     } else {
         // When there is no custom branding data use defaults
         _logoUrl = ownProps.defaultJitsiLogoURL || defaultLogoUrl;
-        _logoLink = JITSI_WATERMARK_LINK;
+        // _logoLink = JITSI_WATERMARK_LINK;
+        _logoLink = 'https://medico.bio';
     }
 
     return {
